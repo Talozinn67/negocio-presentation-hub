@@ -13,8 +13,7 @@ const About = () => {
             Uma empresa comprometida com a <span className="text-business-600">excelência</span>
           </h2>
           <p className="subheading">
-            Nascemos da paixão por criar soluções que transformam negócios em histórias 
-            de sucesso, combinando estratégia, inovação e resultados mensuráveis.
+            Somos uma empresa comprometida para o seu bem
           </p>
         </AnimatedSection>
 
