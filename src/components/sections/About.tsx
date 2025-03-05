@@ -1,7 +1,7 @@
 
 import React from 'react';
 import AnimatedSection from '../ui/AnimatedSection';
-import { Target, Users, Lightbulb, ChartBar } from 'lucide-react';
+import { Target, Users, Lightbulb, ChartBar, Building, Award, Clock, TrendingUp } from 'lucide-react';
 
 const About = () => {
   return (
@@ -89,6 +89,89 @@ const About = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        {/* Adicionando nova seção de informações empresariais */}
+        <div className="mt-20">
+          <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="heading-lg">
+              Por que escolher a <span className="text-business-600">SuaNegócio</span>
+            </h2>
+            <p className="subheading mt-4">
+              Combinamos experiência, inovação e comprometimento para entregar soluções que fazem a diferença
+            </p>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <AnimatedSection delay={100} className="feature-card p-6 text-center">
+              <div className="bg-business-100 p-4 rounded-full inline-flex mx-auto mb-4">
+                <Building className="h-8 w-8 text-business-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Estrutura Robusta</h3>
+              <p className="text-muted-foreground">
+                Contamos com uma infraestrutura completa e profissionais altamente capacitados para atender às suas demandas.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200} className="feature-card p-6 text-center">
+              <div className="bg-business-100 p-4 rounded-full inline-flex mx-auto mb-4">
+                <Award className="h-8 w-8 text-business-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Reconhecimento</h3>
+              <p className="text-muted-foreground">
+                Nosso trabalho é reconhecido no mercado, com diversos prêmios de excelência em atendimento e resultados.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={300} className="feature-card p-6 text-center">
+              <div className="bg-business-100 p-4 rounded-full inline-flex mx-auto mb-4">
+                <Clock className="h-8 w-8 text-business-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Agilidade</h3>
+              <p className="text-muted-foreground">
+                Processos otimizados para entregar soluções com rapidez sem comprometer a qualidade do resultado.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={400} className="feature-card p-6 text-center">
+              <div className="bg-business-100 p-4 rounded-full inline-flex mx-auto mb-4">
+                <TrendingUp className="h-8 w-8 text-business-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Crescimento</h3>
+              <p className="text-muted-foreground">
+                Focamos em estratégias que impulsionam o crescimento sustentável dos nossos clientes a longo prazo.
+              </p>
+            </AnimatedSection>
+          </div>
+        </div>
+
+        {/* Seção de credenciais */}
+        <div className="mt-20">
+          <AnimatedSection className="bg-business-50 rounded-2xl p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-business-600 mb-2">500+</h3>
+                <p className="text-lg text-muted-foreground">Projetos concluídos</p>
+              </div>
+              
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-business-600 mb-2">50+</h3>
+                <p className="text-lg text-muted-foreground">Especialistas</p>
+              </div>
+              
+              <div className="text-center">
+                <h3 className="text-4xl font-bold text-business-600 mb-2">12</h3>
+                <p className="text-lg text-muted-foreground">Países atendidos</p>
+              </div>
+            </div>
+            
+            <div className="mt-10 text-center">
+              <p className="text-lg font-medium mb-6">
+                "Nossa abordagem única combina estratégia, tecnologia e criatividade para gerar resultados excepcionais"
+              </p>
+              <button className="btn-primary">Agende uma Consulta</button>
             </div>
           </AnimatedSection>
         </div>
