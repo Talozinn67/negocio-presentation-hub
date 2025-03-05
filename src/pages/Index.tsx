@@ -1,12 +1,52 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+import Hero from '../components/sections/Hero';
+import About from '../components/sections/About';
+import Services from '../components/sections/Services';
+import Contact from '../components/sections/Contact';
 
 const Index = () => {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const href = this.getAttribute('href');
+        if (!href) return;
+        
+        const targetElement = document.querySelector(href);
+        if (!targetElement) return;
+        
+        window.scrollTo({
+          top: targetElement.getBoundingClientRect().top + window.scrollY,
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    return () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.removeEventListener('click', () => {});
+      });
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white overflow-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 };
