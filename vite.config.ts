@@ -1,4 +1,8 @@
-import { defineConfig } from "vite";
+mport { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/info-carousel-connect/', // Substitua 'nome-do-repositorio' pelo nome do seu repositório no GitHub
+});
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
